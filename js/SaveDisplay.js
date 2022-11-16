@@ -38,13 +38,19 @@ $(".sampleSurvey input[type='submit']").click(function(e) {
 firebase.firestore().collection("surveydata").onSnapshot(function(querySnapShot){
   var n1 = 0; // how many As
   var n2 = 0; // how many Bs
+  var n3 = 0; // how many Cs
+  var n4 = 0; // how many Ds
+  var n5 = 0; // how many Es
   querySnapShot.forEach(function(doc){
     console.log("document -- ", doc.data().choice);
     var s = doc.data().choice;
     switch(s){
       case "a":n1++; $('#ans1').text(n1);break;
       case "b":n2++; $('#ans2').text(n2);break;
+      case "c":n3++; $('#ans3').text(n3);break;
+      case "d":n4++; $('#ans4').text(n4);break;
+      case "e":n5++; $('#ans5').text(n5);break;
     }
   });
-  console.log("n1="+n1+" n2="+n2);
+  console.log("n1="+n1+" n2="+n2+" n3="+n3+" n4="+n4+" n5="+n5);
 });
