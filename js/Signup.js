@@ -1,12 +1,11 @@
 var firebaseConfig = {
-  apiKey: "AIzaSyAzcwgZuLA7dO9g4sQhXQVTUgCo0M8m2qM",
-  authDomain: "grocerylist-91956.firebaseapp.com",
-  databaseURL: "https://grocerylist-91956.firebaseio.com",
-  projectId: "grocerylist-91956",
-  storageBucket: "grocerylist-91956.appspot.com",
-  messagingSenderId: "813812426276",
-  appId: "1:813812426276:web:93e5897af12892ff78dab1",
-  measurementId: "G-VZ83BTR72T"
+  apiKey: "AIzaSyBJ2GY8GrmP_EnaS6osD50ONB1opPYKbFk",
+  authDomain: "jonathanwalkergrocerylist2022.firebaseapp.com",
+  projectId: "jonathanwalkergrocerylist2022",
+  storageBucket: "jonathanwalkergrocerylist2022.appspot.com",
+  messagingSenderId: "232752388789",
+  appId: "1:232752388789:web:cc0a99c426464c28f0bcfc",
+  measurementId: "G-FXC5X0N5X9"
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
