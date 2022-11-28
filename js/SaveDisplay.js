@@ -13,6 +13,26 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
+firebase.auth().onAuthStateChanged((user)=>{
+  if(user){
+    console.log("We have a user logged in "+user.email);
+  }else{
+    console.log("The user did not log in");
+    window.location.href = 'index.html';
+  }
+});
+
+$('#signout').click(function() {
+  firebase.auth().signOut().then(() =>{
+    // sign out successful
+    window.location.href = 'index.html';
+  })
+  .catch((error) => {
+    // error happening
+    console.log(error.message);
+  })
+});
+
 // save the data
 $(".sampleSurvey input[type='submit']").click(function(e) {
   e.preventDefault();
